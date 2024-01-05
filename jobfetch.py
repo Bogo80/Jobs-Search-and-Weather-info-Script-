@@ -20,7 +20,7 @@ def fetch_weather_info(city):
 
 def main():
     job_postings = fetch_job_postings()
-    # Process only the first 3 job postings (due to api limit on Tomowro.io )
+    # Process only the first 3 job postings (due to 25 api calls limit on Tomowro.io )
     for job in job_postings['data'][:3]:
         city = job['location']
         job_title = job['title']
